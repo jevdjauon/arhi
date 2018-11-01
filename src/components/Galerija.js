@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Gallery from "react-photo-gallery";
 import Lightbox from "react-images";
 
-export default class Gallery extends Component {
+export default class Galerija extends Component {
   constructor() {
     super();
     this.state = { currentImage: 0 };
@@ -49,6 +49,8 @@ export default class Gallery extends Component {
           onClickNext={this.gotoNext}
           currentImage={this.state.currentImage}
           isOpen={this.state.lightboxIsOpen}
+          backdropClosesModal='true'
+          
         />
       </div>
     );

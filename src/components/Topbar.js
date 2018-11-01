@@ -87,15 +87,7 @@ export default class Topbar extends Component {
         </div>
 
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          {/* <Menu.Item
-          as={Link}
-          to="/modal"
-          style={{ color: "white", textDecoration: "none" }}
-          onClick={this.handleItemClick}
-        >
-          Dobrodosli
-
-        </Menu.Item>  */}
+          
 
           <Menu.Item
             as={Link}
@@ -128,8 +120,11 @@ export default class Topbar extends Component {
             item
             as={Link}
             to="/portfolio"
+            
           >
-            <Dropdown.Menu>
+            <Dropdown.Menu 
+              closeOnChange='true'
+            >
               <Dropdown.Item
                 text="Poslovno-apartmanski objekat “Oaza”"
                 as={Link}
@@ -147,12 +142,18 @@ export default class Topbar extends Component {
                 style={{ color: "white", textDecoration: "none" }}
                 onClick={this.handleItemClick}
               /> */}
+
+              <Dropdown.Item>
+                <Link to="/oaza" >test</Link>
+
+              </Dropdown.Item>
               <Dropdown.Item
                 text="Ambasada UAE u Capital Plaza Centru (Podgorica)"
                 as={Link}
                 to="/ambasada"
                 style={{ color: "white", textDecoration: "none" }}
                 onClick={this.handleItemClick}
+                
               />
               <Dropdown.Item
                 text="Atlas banka u Capital Plaza Centru (Podgorica)"
