@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Image, Dimmer } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 import Main from "./components/Main";
 import Topbar from "./components/Topbar";
 import back from "./images/back.jpg";
