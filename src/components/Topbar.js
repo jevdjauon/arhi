@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Menu, Button, Dropdown, Modal, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import s1 from "../images/ja2.jpg";
+import { Document } from "react-pdf";
 
 // const options = [
 //   { key: 1, text: "Poslovno-apartmanski objekat “Oaza”", value: 1 },
@@ -226,6 +227,9 @@ export default class Topbar extends Component {
                     </li>
                   </ol>
                   <p />
+                  <Document file="" />
+                  OR
+                  <Document file="" />
                 </div>
               </Modal.Description>
             </Modal.Content>
