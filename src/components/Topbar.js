@@ -6,11 +6,12 @@ import {
   Modal,
   Image,
   Responsive,
-  Segment
+  Divider
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import s1 from "../images/ja2.jpg";
 import { Document } from "react-pdf";
+import file1 from "../pdf/licencaizvodjenje.pdf";
 
 // const options = [
 //   { key: 1, text: "Poslovno-apartmanski objekat “Oaza”", value: 1 },
@@ -240,9 +241,10 @@ export default class Topbar extends Component {
                       </li>
                     </ol>
                     <p />
-                    <Document file="" />
-                    OR
-                    <Document file="" />
+                    <Divider />
+                    <Document file={{ file1 }} />
+                    <Divider />
+                    <Document file="..src/pdf/licencaproj.pdf" />
                   </div>
                 </Modal.Description>
               </Modal.Content>
