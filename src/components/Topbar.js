@@ -263,64 +263,83 @@ export default class Topbar extends Component {
                 to="/portfolio"
               >
                 <Dropdown.Menu>
-                  <Dropdown.Item
+                  <Dropdown
+                    // item
+                    style={dropStyle}
                     name="Oaza"
                     active={activeItem === "Oaza"}
                     text="Poslovno-apartmanski objekat “Oaza”"
                     as={Link}
                     to="/oaza"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
 
-                  <Dropdown.Item
+                  <Dropdown
+                    // item
+                    style={dropStyle}
                     text="Ambasada UAE u Capital Plaza Centru (Podgorica)"
                     as={Link}
                     to="/ambasada"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
-                  <Dropdown.Item
+                  <Dropdown
+                    style={dropStyle}
                     text="Atlas banka u Capital Plaza Centru (Podgorica)"
                     as={Link}
                     to="/atlas"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
-                  <Dropdown.Item
+                  <Dropdown
+                    style={dropStyle}
                     text="Stambeno-poslovni objekat “Bogdanov kraj” (Cetinje)"
                     as={Link}
                     to="/bogdanov"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
-                  <Dropdown.Item
+                  <Dropdown
+                    style={dropStyle}
                     text="“Benex fitnes centar” u Capital Plaza Centru (Podgorica)"
                     as={Link}
                     to="/benexfitnes"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
-                  <Dropdown.Item
+                  <Dropdown
+                    style={dropStyle}
                     text="Stambeni objekat Cetinje"
                     as={Link}
                     to="/stambenicetinje"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
-                  <Dropdown.Item
+                  <Dropdown
+                    style={dropStyle}
                     text="Enterijer vile na primorju"
                     as={Link}
                     to="/vila"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
-                  <Dropdown.Item
+                  <Dropdown
+                    style={dropStyle}
+                    renderLabel
                     text="Enterijer planinskog stana"
                     as={Link}
                     to="/planinski"
-                    style={{ color: "white", textDecoration: "none" }}
                     onClick={this.handleItemClick}
+                    icon={null}
+                    fluid
                   />
                 </Dropdown.Menu>
               </Dropdown>
@@ -565,7 +584,6 @@ export default class Topbar extends Component {
                 >
                   <Dropdown.Menu>
                     <Dropdown
-                      // item
                       style={dropStyle}
                       name="Oaza"
                       active={activeItem === "Oaza"}
@@ -578,7 +596,6 @@ export default class Topbar extends Component {
                     />
 
                     <Dropdown
-                      // item
                       style={dropStyle}
                       text="Ambasada UAE u Capital Plaza Centru (Podgorica)"
                       as={Link}
