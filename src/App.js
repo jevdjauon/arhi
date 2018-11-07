@@ -20,7 +20,6 @@ class App extends Component {
           }}
           src={back}
         />
-        />
         <Main style={{ position: "absolute" }} />
       </div>
     );
