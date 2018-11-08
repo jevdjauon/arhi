@@ -6,7 +6,6 @@ import {
   Modal,
   Image,
   Responsive,
-  Segment,
   Divider
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -38,7 +37,7 @@ export default class Topbar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Segment.Group>
+      <div>
         <Responsive minWidth={768}>
           <Menu
             icon
@@ -65,7 +64,7 @@ export default class Topbar extends Component {
               <Menu.Item
                 as={Link}
                 to="/"
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "white" }}
                 onClick={this.handleItemClick}
               >
                 MIŠKOVIĆ JELENA ARHITEKTA
@@ -75,7 +74,7 @@ export default class Topbar extends Component {
                 name="account"
                 active={activeItem === "facebook f"}
                 onClick={this.handleItemClick}
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "white" }}
               >
                 <Button
                   style={{ backgroundColor: "#181818", color: "#9d9d9d" }}
@@ -90,7 +89,7 @@ export default class Topbar extends Component {
                 name="search"
                 active={activeItem === "instagram"}
                 onClick={this.handleItemClick}
-                style={{ color: "#00cd57", textDecoration: "none" }}
+                style={{ color: "#00cd57" }}
               >
                 <Button
                   style={{ backgroundColor: "#181818", color: "#9d9d9d" }}
@@ -104,6 +103,7 @@ export default class Topbar extends Component {
 
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <Modal
+                style={{ background: "rgba(30, 30, 30, 0.3)" }}
                 dimmer={"blurring"}
                 trigger={
                   <Button
@@ -114,7 +114,11 @@ export default class Topbar extends Component {
                 }
               >
                 <Modal.Header>O meni</Modal.Header>
-                <Modal.Content style={{ backgroundColor: "#181818" }}>
+                <Modal.Content
+                  style={{
+                    backgroundColor: "rgba(30, 30, 30, 0.3)"
+                  }}
+                >
                   <Image
                     circular
                     src={s1}
@@ -177,6 +181,7 @@ export default class Topbar extends Component {
                 </Modal.Content>
               </Modal>
               <Modal
+                style={{ background: "rgba(30, 30, 30, 0.3)" }}
                 dimmer={"blurring"}
                 trigger={
                   <Button
@@ -190,7 +195,9 @@ export default class Topbar extends Component {
                 }
               >
                 <Modal.Header>Usluge</Modal.Header>
-                <Modal.Content style={{ backgroundColor: "#181818" }}>
+                <Modal.Content
+                  style={{ backgroundColor: "rgba(30, 30, 30, 0.3)" }}
+                >
                   <Modal.Description>
                     <div style={{ padding: "5%", color: "white" }}>
                       <p>
@@ -344,6 +351,7 @@ export default class Topbar extends Component {
                 </Dropdown.Menu>
               </Dropdown>
               <Modal
+                style={{ background: "rgba(30, 30, 30, 0.5)" }}
                 dimmer="blurring"
                 trigger={
                   <Button
@@ -357,7 +365,9 @@ export default class Topbar extends Component {
                 }
               >
                 <Modal.Header>Kontakt</Modal.Header>
-                <Modal.Content style={{ backgroundColor: "#181818" }}>
+                <Modal.Content
+                  style={{ backgroundColor: "rgba(30, 30, 30, 0.5)" }}
+                >
                   <Modal.Description>
                     <div style={{ color: "white" }}>
                       <h5>+382 67 254 844</h5>
@@ -397,18 +407,25 @@ export default class Topbar extends Component {
             </div>
           </Menu>
         </Responsive>
-        <Responsive>
+        <Responsive maxWidth={768}>
           <Dropdown
             icon="bars"
             className="icon"
+            pointing="left"
             button
-            simple
-            item
+            closeOnChange
+            iconStyle={{
+              justifyContent: "center",
+              alignItems: "center"
+            }}
             style={{
               backgroundColor: "#181818",
-              color: "white"
+              color: "white",
+              width: "50px",
+              height: "50px",
+              margin: "5%"
             }}
-            compact
+
             // onMouseEnter={this.mouseEnter}
             // onMouseLeave={this.mouseLeave}
           >
@@ -422,6 +439,8 @@ export default class Topbar extends Component {
               />
               <Dropdown.Item>
                 <Modal
+                  style={{ background: "rgba(30, 30, 30, 0.3)" }}
+                  closeIcon
                   dimmer={"blurring"}
                   trigger={
                     <a style={{ backgroundColor: "#181818", color: "white" }}>
@@ -430,8 +449,10 @@ export default class Topbar extends Component {
                   }
                 >
                   <Modal.Header>O meni</Modal.Header>
-                  <Modal.Content style={{ backgroundColor: "#181818" }}>
-                    <Image
+                  <Modal.Content
+                    style={{ backgroundColor: "rgba(30, 30, 30, 0.3)" }}
+                  >
+                    {/* <Image
                       circular
                       src={s1}
                       style={{
@@ -439,7 +460,7 @@ export default class Topbar extends Component {
                         width: "15%",
                         paddingBottom: "0px"
                       }}
-                    />
+                    /> */}
                     <Modal.Description>
                       <p
                         style={{
@@ -495,6 +516,8 @@ export default class Topbar extends Component {
               </Dropdown.Item>
               <Dropdown.Item>
                 <Modal
+                  style={{ background: "rgba(30, 30, 30, 0.3)" }}
+                  closeIcon
                   dimmer={"blurring"}
                   trigger={
                     <a
@@ -508,7 +531,9 @@ export default class Topbar extends Component {
                   }
                 >
                   <Modal.Header>Usluge</Modal.Header>
-                  <Modal.Content style={{ backgroundColor: "#181818" }}>
+                  <Modal.Content
+                    style={{ backgroundColor: "rgba(30, 30, 30, 0.3)" }}
+                  >
                     <Modal.Description>
                       <div style={{ padding: "5%", color: "white" }}>
                         <p>
@@ -664,6 +689,8 @@ export default class Topbar extends Component {
               </Dropdown.Item>
               <Dropdown.Item>
                 <Modal
+                  style={{ background: "rgba(30, 30, 30, 0.5)" }}
+                  closeIcon
                   dimmer="blurring"
                   trigger={
                     <a
@@ -677,7 +704,9 @@ export default class Topbar extends Component {
                   }
                 >
                   <Modal.Header>Kontakt</Modal.Header>
-                  <Modal.Content style={{ backgroundColor: "#181818" }}>
+                  <Modal.Content
+                    style={{ backgroundColor: "rgba(30, 30, 30, 0.5)" }}
+                  >
                     <Modal.Description>
                       <div style={{ color: "white" }}>
                         <h5>+382 67 254 844</h5>
@@ -718,7 +747,7 @@ export default class Topbar extends Component {
             </Dropdown.Menu>
           </Dropdown>
         </Responsive>
-      </Segment.Group>
+      </div>
     );
   }
 }
