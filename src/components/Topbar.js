@@ -14,14 +14,6 @@ import { Document } from "react-pdf";
 import file1 from "../pdf/licencaizvodjenje.pdf";
 
 export default class Topbar extends Component {
-  // mouseEnter() {
-  //   console.log("test");
-  // }
-
-  // mouseLeave() {
-  //   console.log("testleave");
-  // }
-
   state = {};
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -34,31 +26,35 @@ export default class Topbar extends Component {
       margin: "5%"
     };
 
+    const menuStyle = {
+      width: "100%",
+      position: "fixed",
+      top: "0",
+      backgroundColor: "#181818",
+      zIndex: 1,
+      borderRadius: 0,
+      display: "flex",
+      flexFlow: "row",
+      justifyContent: "space-around",
+      maxHeight: "20px"
+    };
+
+    const menuButton = {
+      backgroundColor: "#181818",
+      color: "#9d9d9d"
+    };
+
     const { activeItem } = this.state;
 
     return (
       <div>
-        <Responsive minWidth={768}>
-          <Menu
-            icon
-            style={{
-              width: "100%",
-              position: "fixed",
-              top: "0",
-              backgroundColor: "#181818",
-              zIndex: 1,
-              borderRadius: 0,
-              display: "flex",
-              flexFlow: "row wrap",
-              justifyContent: "space-between",
-              maxHeight: "20px"
-            }}
-          >
+        <Responsive minWidth={769}>
+          <Menu icon style={menuStyle}>
             <div
               style={{
                 display: "flex",
                 justifyContent: "flex-start"
-                // marginRight: "60%"
+                // paddingRight: "60%"
               }}
             >
               <Menu.Item
@@ -77,7 +73,7 @@ export default class Topbar extends Component {
                 style={{ color: "white" }}
               >
                 <Button
-                  style={{ backgroundColor: "#181818", color: "#9d9d9d" }}
+                  style={menuButton}
                   circular
                   icon="facebook f"
                   href="https://www.facebook.com/jelena.miskovic.50"
@@ -92,7 +88,7 @@ export default class Topbar extends Component {
                 style={{ color: "#00cd57" }}
               >
                 <Button
-                  style={{ backgroundColor: "#181818", color: "#9d9d9d" }}
+                  style={menuButton}
                   circular
                   icon="instagram"
                   href="https://www.instagram.com/ena_jel/"
@@ -101,7 +97,7 @@ export default class Topbar extends Component {
               </Menu.Item>
             </div>
 
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <div style={{ display: "flex", justifyContent: "strech" }}>
               <Modal
                 style={{ background: "rgba(30, 30, 30, 0.3)" }}
                 dimmer={"blurring"}
@@ -274,7 +270,7 @@ export default class Topbar extends Component {
                     // item
                     style={dropStyle}
                     name="Oaza"
-                    active={activeItem === "Oaza"}
+                    // active={activeItem === "Oaza"}
                     text="Poslovno-apartmanski objekat “Oaza”"
                     as={Link}
                     to="/oaza"
@@ -340,7 +336,6 @@ export default class Topbar extends Component {
                   />
                   <Dropdown
                     style={dropStyle}
-                    renderLabel
                     text="Enterijer planinskog stana"
                     as={Link}
                     to="/planinski"
@@ -414,10 +409,6 @@ export default class Topbar extends Component {
             pointing="left"
             button
             closeOnChange
-            iconStyle={{
-              justifyContent: "center",
-              alignItems: "center"
-            }}
             style={{
               backgroundColor: "#181818",
               color: "white",
@@ -425,9 +416,6 @@ export default class Topbar extends Component {
               height: "50px",
               margin: "5%"
             }}
-
-            // onMouseEnter={this.mouseEnter}
-            // onMouseLeave={this.mouseLeave}
           >
             <Dropdown.Menu style={{ backgroundColor: "#181818" }}>
               <Dropdown.Item
@@ -611,7 +599,7 @@ export default class Topbar extends Component {
                     <Dropdown
                       style={dropStyle}
                       name="Oaza"
-                      active={activeItem === "Oaza"}
+                      // active={activeItem === "Oaza"}
                       text="Poslovno-apartmanski objekat “Oaza”"
                       as={Link}
                       to="/oaza"
@@ -676,7 +664,6 @@ export default class Topbar extends Component {
                     />
                     <Dropdown
                       style={dropStyle}
-                      renderLabel
                       text="Enterijer planinskog stana"
                       as={Link}
                       to="/planinski"

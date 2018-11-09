@@ -8,7 +8,6 @@ import StambeniCetinje from "./StambeniCetinje";
 import Planinski from "./Planinski";
 import Vila from "./Vila";
 
-
 const Portfolio = () => (
   <div>
     <Oaza />
@@ -17,8 +16,8 @@ const Portfolio = () => (
     <Bogdanov />
     <Benexfitnes />
     <StambeniCetinje />
-    <Planinski />
     <Vila />
+    <Planinski />
   </div>
 );
 
