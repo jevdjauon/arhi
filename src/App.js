@@ -4,12 +4,18 @@ import { Image, Responsive } from "semantic-ui-react";
 import Main from "./components/Main";
 import Topbar from "./components/Topbar";
 import back from "./images/back.jpg";
+import TopbarRes from "./components/TopbarRes";
 
 class App extends Component {
   render() {
     return (
       <div className="main">
-        <Topbar />
+        <Responsive>
+          <Topbar />
+        </Responsive>
+        <Responsive maxWidth={768}>
+          <TopbarRes />
+        </Responsive>
         <div>
           <Responsive>
             <Image
