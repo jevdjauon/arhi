@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import s1 from "../images/ja2.jpg";
 import { Document } from "react-pdf";
-import file1 from "../pdf/izvodjenje.pdf";
+import file1 from "../pdf/projektovanje.pdf";
 
 export default class Topbar extends Component {
   state = {};
@@ -105,12 +105,7 @@ export default class Topbar extends Component {
             >
               <Modal
                 style={{
-                  background: "rgba(30, 30, 30, 0.3)",
-                  margin: "auto",
-                  width: "50%"
-                  // width: "90%",
-                  // margin: "auto",
-                  // marginTop: "5%",
+                  background: "rgba(30, 30, 30, 0.3)"
                 }}
                 dimmer={"blurring"}
                 trigger={
