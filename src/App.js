@@ -3,8 +3,11 @@ import "./App.css";
 import { Image, Responsive } from "semantic-ui-react";
 import Main from "./components/Main";
 import Topbar from "./components/Topbar";
-import back from "./images/back.jpg";
 import TopbarRes from "./components/TopbarRes";
+import back from "./images/back.jpg";
+import back2 from "./images/back3.jpg";
+import back3 from "./images/back2.jpg";
+import back4 from "./images/back4.jpg";
 
 class App extends Component {
   render() {
@@ -26,7 +29,7 @@ class App extends Component {
                 top: "0px",
                 filter: "blur(5px)"
               }}
-              src={back}
+              src={back2}
             />
           </Responsive>
           <Responsive maxWidth={768}>
@@ -40,7 +43,7 @@ class App extends Component {
                 height: "100%",
                 width: "auto"
               }}
-              src={back}
+              src={back3}
             />
           </Responsive>
         </div>

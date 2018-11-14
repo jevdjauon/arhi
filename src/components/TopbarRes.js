@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Menu, Button, Dropdown, Modal, Divider } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { Document } from "react-pdf";
-import file1 from "../pdf/licencaizvodjenje.pdf";
+import file1 from "../pdf/izvodjenje.pdf";
 
 export default class TopbarRes extends Component {
   state = {};
@@ -31,8 +31,19 @@ export default class TopbarRes extends Component {
     };
 
     const menuButton = {
+      backgroundColor: "white",
+      color: "#181818",
+      width: "50px",
+      height: "30px",
+      marginTop: "5%"
+    };
+
+    const dropButton = {
       backgroundColor: "#181818",
-      color: "#9d9d9d"
+      color: "white",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center"
     };
 
     const { activeItem } = this.state;
@@ -51,55 +62,54 @@ export default class TopbarRes extends Component {
             MIŠKOVIĆ JELENA ARHITEKTA
           </Menu.Item>
         </div>
-        <div style={{ float: "right" }}>
+        <div>
           <Dropdown
             // direction="right"
             item
             position="left"
-            // defaultOpen
+            defaultOpen
             icon="bars"
             className="icon"
             // pointing="right"
             // button
             closeOnChange
-            style={{
-              backgroundColor: "#181818",
-              color: "white",
-              width: "50px",
-              height: "30px",
-              margin: "5%"
-            }}
+            style={menuButton}
           >
             <Dropdown.Menu
               style={{
                 backgroundColor: "#181818",
-                height: "50vh",
-                width: "50vw",
+                height: "100vh",
+                width: "90vw",
                 right: "0",
                 left: "auto"
               }}
             >
               <Dropdown.Item
+                button
                 style={{ color: "white" }}
                 text="MIŠKOVIĆ JELENA"
                 as={Link}
                 to="/"
                 onClick={this.handleItemClick}
               />
+              <Divider />
               <Dropdown.Item>
                 <Modal
-                  style={{ background: "rgba(30, 30, 30, 0.3)" }}
+                  button
+                  style={{
+                    background: "rgba(30, 30, 30, 0.3)",
+                    marginTop: "5%",
+                    width: "91vw"
+                  }}
                   closeIcon
                   dimmer={"blurring"}
-                  trigger={
-                    <a style={{ backgroundColor: "#181818", color: "white" }}>
-                      O meni
-                    </a>
-                  }
+                  trigger={<a style={dropButton}>O meni</a>}
                 >
                   <Modal.Header>O meni</Modal.Header>
                   <Modal.Content
-                    style={{ backgroundColor: "rgba(30, 30, 30, 0.3)" }}
+                    style={{
+                      backgroundColor: "rgba(30, 30, 30, 0.3)"
+                    }}
                   >
                     <Modal.Description>
                       <p
@@ -154,21 +164,17 @@ export default class TopbarRes extends Component {
                   </Modal.Content>
                 </Modal>
               </Dropdown.Item>
+              <Divider />
               <Dropdown.Item>
                 <Modal
-                  style={{ background: "rgba(30, 30, 30, 0.3)" }}
+                  style={{
+                    background: "rgba(30, 30, 30, 0.3)",
+                    marginTop: "5%",
+                    width: "91vw"
+                  }}
                   closeIcon
                   dimmer={"blurring"}
-                  trigger={
-                    <a
-                      style={{
-                        backgroundColor: "#181818",
-                        color: "white"
-                      }}
-                    >
-                      Usluge
-                    </a>
-                  }
+                  trigger={<a style={dropButton}>Usluge</a>}
                 >
                   <Modal.Header>Usluge</Modal.Header>
                   <Modal.Content
@@ -238,14 +244,14 @@ export default class TopbarRes extends Component {
                   </Modal.Content>
                 </Modal>
               </Dropdown.Item>
+              <Divider />
               <Dropdown.Item>
                 <Dropdown
-                  style={{ color: "white" }}
+                  style={dropButton}
                   text="Portfolio"
-                  simple
-                  item
                   as={Link}
                   to="/portfolio"
+                  // icon="null"
                 >
                   <Dropdown.Menu>
                     <Dropdown
@@ -326,21 +332,17 @@ export default class TopbarRes extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </Dropdown.Item>
+              <Divider />
               <Dropdown.Item>
                 <Modal
-                  style={{ background: "rgba(30, 30, 30, 0.5)" }}
+                  style={{
+                    background: "rgba(30, 30, 30, 0.5)",
+                    marginTop: "5%",
+                    width: "91vw"
+                  }}
                   closeIcon
                   dimmer="blurring"
-                  trigger={
-                    <a
-                      style={{
-                        backgroundColor: "#181818",
-                        color: "white"
-                      }}
-                    >
-                      Kontakt
-                    </a>
-                  }
+                  trigger={<a style={dropButton}>Kontakt</a>}
                 >
                   <Modal.Header>Kontakt</Modal.Header>
                   <Modal.Content

@@ -7,7 +7,7 @@ const divStyle = {
   marginLeft: "5%",
   color: "white",
   backgroundColor: "rgba(30, 30, 30, 0.5)",
-  borderRadius: "5px"
+  borderRadius: "50"
 };
 
 const contStyle = {
