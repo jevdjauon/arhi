@@ -64,35 +64,22 @@ export default class TopbarRes extends Component {
         </div>
         <div>
           <Dropdown
-            // direction="right"
             item
             position="left"
             defaultOpen
             icon="bars"
             className="icon"
-            // pointing="right"
-            // button
             closeOnChange
             style={menuButton}
           >
             <Dropdown.Menu
               style={{
                 backgroundColor: "#181818",
-                // height: "100vh",
                 width: "50vw",
                 right: "0",
                 left: "auto"
               }}
             >
-              <Dropdown.Item
-                button
-                style={dropButton}
-                text="MIŠKOVIĆ JELENA"
-                as={Link}
-                to="/"
-                onClick={this.handleItemClick}
-              />
-              <Divider />
               <Dropdown.Item>
                 <Modal
                   button
@@ -262,8 +249,7 @@ export default class TopbarRes extends Component {
                     <Dropdown
                       style={dropStyle}
                       name="Oaza"
-                      // active={activeItem === "Oaza"}
-                      // text="Poslovno-apartmanski objekat “Oaza”"
+                      active={activeItem === "Oaza"}
                       text="“Oaza”"
                       as={Link}
                       to="/oaza"
