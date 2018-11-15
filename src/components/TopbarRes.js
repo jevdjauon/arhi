@@ -11,7 +11,7 @@ export default class TopbarRes extends Component {
 
   render() {
     const dropStyle = {
-      height: "30px",
+      // height: "30px",
       width: "380px",
       color: "black",
       margin: "5%"
@@ -78,15 +78,15 @@ export default class TopbarRes extends Component {
             <Dropdown.Menu
               style={{
                 backgroundColor: "#181818",
-                height: "100vh",
-                width: "90vw",
+                // height: "100vh",
+                width: "50vw",
                 right: "0",
                 left: "auto"
               }}
             >
               <Dropdown.Item
                 button
-                style={{ color: "white" }}
+                style={dropButton}
                 text="MIŠKOVIĆ JELENA"
                 as={Link}
                 to="/"
@@ -251,78 +251,90 @@ export default class TopbarRes extends Component {
                   text="Portfolio"
                   as={Link}
                   to="/portfolio"
-                  // icon="null"
+                  simple
+                  pointing="right"
                 >
-                  <Dropdown.Menu>
+                  <Dropdown.Menu
+                    style={{
+                      width: "50vw"
+                    }}
+                  >
                     <Dropdown
                       style={dropStyle}
                       name="Oaza"
                       // active={activeItem === "Oaza"}
-                      text="Poslovno-apartmanski objekat “Oaza”"
+                      // text="Poslovno-apartmanski objekat “Oaza”"
+                      text="“Oaza”"
                       as={Link}
                       to="/oaza"
                       onClick={this.handleItemClick}
                       icon={null}
                       fluid
                     />
-
+                    <Divider style={{ margin: "0" }} />
                     <Dropdown
                       style={dropStyle}
-                      text="Ambasada UAE u Capital Plaza Centru (Podgorica)"
+                      text="Ambasada UAE"
                       as={Link}
                       to="/ambasada"
                       onClick={this.handleItemClick}
                       icon={null}
                       fluid
                     />
+                    <Divider />
                     <Dropdown
                       style={dropStyle}
-                      text="Atlas banka u Capital Plaza Centru (Podgorica)"
+                      text="Atlas banka"
                       as={Link}
                       to="/atlas"
                       onClick={this.handleItemClick}
                       icon={null}
                       fluid
                     />
+                    <Divider />
                     <Dropdown
                       style={dropStyle}
-                      text="Stambeno-poslovni objekat “Bogdanov kraj” (Cetinje)"
+                      text="“Bogdanov kraj”"
                       as={Link}
                       to="/bogdanov"
                       onClick={this.handleItemClick}
                       icon={null}
                       fluid
                     />
+                    <Divider />
                     <Dropdown
                       style={dropStyle}
-                      text="“Benex fitnes centar” u Capital Plaza Centru (Podgorica)"
+                      text="“Benex fitnes centar”"
                       as={Link}
                       to="/benexfitnes"
                       onClick={this.handleItemClick}
                       icon={null}
                       fluid
                     />
+                    <Divider />
                     <Dropdown
                       style={dropStyle}
-                      text="Stambeni objekat Cetinje"
+                      text="Stambeni objekat"
                       as={Link}
                       to="/stambenicetinje"
                       onClick={this.handleItemClick}
                       icon={null}
                       fluid
                     />
+                    <Divider />
                     <Dropdown
                       style={dropStyle}
-                      text="Enterijer vile na primorju"
+                      text="Vila na primorju"
                       as={Link}
                       to="/vila"
                       onClick={this.handleItemClick}
                       icon={null}
                       fluid
                     />
+                    <Divider />
                     <Dropdown
                       style={dropStyle}
-                      text="Enterijer planinskog stana"
+                      text="Planinski stana"
                       as={Link}
                       to="/planinski"
                       onClick={this.handleItemClick}
