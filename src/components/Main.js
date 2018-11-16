@@ -10,6 +10,7 @@ import Vila from "./Vila";
 import Planinski from "./Planinski";
 import StambeniCetinje from "./StambeniCetinje";
 import Portfolio from "./Portfolio";
+import Sidebar from "./Sidebar";
 
 class Main extends Component {
   render() {
@@ -25,6 +26,7 @@ class Main extends Component {
         <Route path="/planinski" component={Planinski} />
         <Route path="/stambenicetinje" component={StambeniCetinje} />
         <Route path="/portfolio" component={Portfolio} />
+        <Route path="/sidebar" component={Sidebar} />
       </Switch>
     );
   }

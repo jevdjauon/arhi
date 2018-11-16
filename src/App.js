@@ -3,11 +3,9 @@ import "./App.css";
 import { Image, Responsive } from "semantic-ui-react";
 import Main from "./components/Main";
 import Topbar from "./components/Topbar";
-import TopbarRes from "./components/TopbarRes";
-import back from "./images/back.jpg";
+import TopbarRes from "./components/TopbarResTest";
 import back2 from "./images/back3.jpg";
 import back3 from "./images/back2.jpg";
-import back4 from "./images/back4.jpg";
 
 class App extends Component {
   render() {
