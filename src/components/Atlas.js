@@ -3,15 +3,17 @@ import Galerija from "./Galerija";
 import slike from "./Slike";
 
 const naslov = {
-  color: "white",
-  background: "rgba(30, 30, 30, 0.5)",
+  color: "black",
+  background: "rgba(219, 197, 137, 0.9)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   width: "50%",
   margin: "auto",
   minHeight: "50px",
-  borderRadius: "5px"
+  borderRadius: "0px 0px 5px 5px",
+  position: "sticky",
+  top: "40px"
 };
 
 const Atlas = () => (

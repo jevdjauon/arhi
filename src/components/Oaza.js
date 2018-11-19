@@ -11,7 +11,9 @@ const naslov = {
   width: "50%",
   margin: "auto",
   minHeight: "50px",
-  borderRadius: "5px"
+  borderRadius: "5px",
+  position: "sticky",
+  top: "40px"
 };
 
 const Oaza = () => (
